@@ -1,0 +1,43 @@
+{
+  "device": "cuda",
+  "hyperparameters": {
+    "epochs": 5,
+    "batch_size": 64,
+    "feature_batch_size": 256,
+    "learning_rate": 0.001
+  },
+  "results": [
+    {
+      "model": "model_1_lenet5_baseline",
+      "test_accuracy": 0.9879,
+      "parameter_count": 64122
+    },
+    {
+      "model": "model_2_lenet5_improved",
+      "test_accuracy": 0.9901,
+      "parameter_count": 64438
+    },
+    {
+      "model": "model_3_resnet18",
+      "test_accuracy": 0.9837,
+      "parameter_count": 11175370
+    },
+    {
+      "model": "model_4_hybrid_cnn_svm",
+      "test_accuracy": 0.9921,
+      "parameter_count": 0
+    }
+  ],
+  "hybrid_vs_full_cnn": {
+    "dataset": "MNIST",
+    "reference_full_cnn": "model_2_lenet5_improved",
+    "reference_full_cnn_accuracy": 0.9901,
+    "hybrid_model_accuracy": 0.9921,
+    "accuracy_gap": 0.002
+  },
+  "project_extensions": [
+    "Yanlis siniflandirilan ornekler icin guven skoru galerisi",
+    "CNN ozellik uzayi icin PCA tabanli 2B izdusum",
+    "Dogruluk-parametre karmasikligi analizi"
+  ]
+}
